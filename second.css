@@ -1,0 +1,139 @@
+@import "compass/css3";
+
+a {
+    text-decoration: none !important;
+}
+
+span.terminal {
+	font-family: monospace;
+	font-size: 3.7em;
+}
+.terminal-prompt{
+	font-family: monospace;
+	font-size: 2em;
+}
+.terminal-prompt:after {
+	font-size: 1.1em;
+	content:"|";
+	opacity: 0;
+	-webkit-animation: cursor 1s infinite;
+	animation: cursor 1s infinite;
+}
+.terminal-input{
+	display:inline;
+	width:auto;
+	background: transparent;
+	font-family: monospace;
+	font-size: 1em;
+	border: 0px;
+	padding: 0px;
+}
+.terminal-input:after {
+	content:"|";
+	opacity: 0;
+	-webkit-animation: cursor 1s infinite;
+	animation: cursor 1s infinite;
+}
+@keyframes cursor {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@-webkit-keyframes cursor {
+  0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+/* styling */
+ html {
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(circle, #fff 0%, #aaa 100%) no-repeat;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+body {
+	text-align: left;
+	display: table;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+#wrap {
+	position:relative;
+	box-sizing: border-box;
+	display: block;
+	vertical-align: middle;
+}
+.terminal-wrapper{
+	width: 100%;
+	position:fixed;
+	margin:auto;
+	top:8%;
+	left:8%;
+}
+
+input[type="text"]{
+    /*color : transparent;
+    text-shadow : 0 0 0 #000;*/
+}
+input[type="text"]:focus{
+    outline : none;
+}
+
+.output-wrapper{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	height: 500px;
+	width: 1000px;
+}
+
+#terminal-output{
+	font-family: monospace;
+	font-size: 2.3em;
+	color: #3f3f3f;
+	position: absolute;
+	left: 0%;
+	top: 5%;
+}
+
+.help-output{
+	width:1000px;
+	font-family: monospace;
+	font-size: 1.3em;
+	color: #b62020;
+	position: absolute;
+	left: 0%;
+	top: 5%;
+}
+
+.user-name{
+	font-size: 1em;
+	color: #2a4d69;
+}
